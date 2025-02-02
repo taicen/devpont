@@ -10,7 +10,8 @@ const ideas = [
 
 const trpc = initTRPC.create()
 
-const x: string = 12321
+const x: string = '12321123'
+console.info(x)
 
 export const trpcRouter = trpc.router({
   getIdeas: trpc.procedure.query(() => {

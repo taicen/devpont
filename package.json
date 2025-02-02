@@ -7,7 +7,7 @@
     "c": "pnpm --filter @taicen/client",
     "lint": "concurrently 'pnpm b lint' 'pnpm c lint'",
     "types": "pnpm -r --parallel types",
-    "prepare": "husky init"
+    "prepare": "husky"
   },
   "devDependencies": {
     "concurrently": "^9.1.2",
