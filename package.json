@@ -1,0 +1,17 @@
+{
+  "name": "taicen",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "b": "pnpm --filter @taicen/server",
+    "c": "pnpm --filter @taicen/client",
+    "lint": "concurrently 'pnpm b lint' 'pnpm c lint'",
+    "types": "pnpm -r --parallel types",
+    "prepare": "husky init"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.3"
+  }
+}
