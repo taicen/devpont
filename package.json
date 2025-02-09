@@ -3,9 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "b": "pnpm --filter @taicen/server",
-    "c": "pnpm --filter @taicen/client",
-    "lint": "concurrently 'pnpm b lint' 'pnpm c lint'",
+    "serve": "pnpm --filter @taicen/server",
+    "front": "pnpm --filter @taicen/client",
+    "lint": "concurrently 'pnpm serve lint' 'pnpm front lint'",
     "types": "pnpm -r --parallel types",
     "prepare": "husky"
   },
