@@ -4,3 +4,13 @@
 .title {
   @include h1;
 }
+
+.form {
+  label {
+    display: flex;
+  }
+
+  & div {
+    margin-bottom: 10px;
+  }
+}

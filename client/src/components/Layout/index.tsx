@@ -1,7 +1,7 @@
 import { Link, Outlet } from 'react-router-dom'
 import * as routes from '../../lib/routes'
 
-import css from './index.module.scss'
+import css from './styles.module.scss'
 
 export const Layout = () => {
   return (

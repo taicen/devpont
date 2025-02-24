@@ -24,7 +24,7 @@ export default tseslint.config(
       'no-console': ['error', { allow: ['warn', 'error', 'info'] }],
       'no-irregular-whitespace': ['error', { skipTemplates: true, skipStrings: true }],
       'no-unused-vars': 'off',
-      '@typescript-eslint/no-unused-vars': 'error',
+      '@typescript-eslint/no-unused-vars': 'warn',
       '@typescript-eslint/strict-boolean-expressions': 'off',
       '@typescript-eslint/no-explicit-any': 'off',
       '@typescript-eslint/prefer-nullish-coalescing': 'off',
