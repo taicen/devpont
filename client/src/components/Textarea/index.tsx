@@ -1,14 +1,26 @@
 import { type FormikProps } from 'formik'
+import cn from 'classnames'
+
+import css from './styles.module.scss'
 
 export const Textarea = ({ name, label, formik }: { name: string; label: string; formik: FormikProps<any> }) => {
   const state = formik.values
   const errors = formik.errors as Partial<typeof state>
   const touched = formik.touched as Partial<typeof state>
 
+  const invalid = !!touched[name] && !!errors[name]
+  const disabled = formik.isSubmitting
+
   return (
-    <div>
-      <label htmlFor={name}>{label}</label>
+    <div className={cn({ [css.field]: true, [css.disabled]: disabled })}>
+      <label className={css.label} htmlFor={name}>
+        {label}
+      </label>
       <textarea
+        className={cn({
+          [css.input]: true,
+          [css.invalid]: invalid,
+        })}
         onChange={(e) => {
           formik.setFieldValue(name, e.target.value)
         }}
@@ -18,7 +30,7 @@ export const Textarea = ({ name, label, formik }: { name: string; label: string;
         id={name}
         disabled={formik.isSubmitting}
       />
-      {!!touched[name] && !!errors[name] && <div className="error">{errors[name]}</div>}
+      {invalid && <div className="error">{errors[name]}</div>}
     </div>
   )
 }
