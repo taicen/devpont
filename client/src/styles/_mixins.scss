@@ -1,11 +1,11 @@
-@import './vars';
-@import '../../node_modules/include-media/dist/include-media';
+@forward '../../node_modules/include-media/dist/include-media';
+@use './vars' as *;
 
-@mixin link($color: $blue, $hoverColor: $red){
+@mixin link($color: $blue, $hoverColor: $red) {
   color: $color;
-  transition: color .2s ease;
+  transition: color 0.2s ease;
   &:active,
-  &:hover{
+  &:hover {
     color: $hoverColor;
     transition: none;
   }

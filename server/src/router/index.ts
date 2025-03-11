@@ -1,5 +1,5 @@
 import { trpc } from '../lib/trpc'
-
+// NOTE: код ниже нужен для генерации маршрутов из trpc роутера через терминал небольшая автоматизация с помощью пакета vscode-generate-index-standalone
 // @index('./**/index.ts', f => `import { ${f.path.split('/').slice(0, -1).pop()}TrpcRoute } from '${f.path.split('/').slice(0, -1).join('/')}'`)
 import { createIdeaTrpcRoute } from './createIdea'
 import { getIdeaTrpcRoute } from './getIdea'

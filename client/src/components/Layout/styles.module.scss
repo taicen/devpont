@@ -1,5 +1,5 @@
-@import '../../styles/vars';
-@import '../../styles/mixins';
+@use '../../styles/vars' as *;
+@use '../../styles/mixins' as *;
 
 $breackpoint: '<=900px';
 
@@ -8,7 +8,7 @@ $breackpoint: '<=900px';
   flex-flow: row nowrap;
   height: 100%;
   @include media($breackpoint) {
-    flex-flow: column nowrap; 
+    flex-flow: column nowrap;
   }
 
   .navigation {
@@ -43,7 +43,7 @@ $breackpoint: '<=900px';
       }
     }
   }
-  
+
   .content {
     height: 100%;
     overflow: auto;
@@ -55,5 +55,4 @@ $breackpoint: '<=900px';
       height: auto;
     }
   }
-
 }

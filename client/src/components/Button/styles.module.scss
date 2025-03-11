@@ -1,5 +1,5 @@
-@import '../../styles/_vars';
-@import '../../styles/_mixins';
+@use '../../styles/_vars' as *;
+@use '../../styles/_mixins' as *;
 
 .button {
   padding: 8px 15px;
